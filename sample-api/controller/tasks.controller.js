@@ -32,14 +32,14 @@ const updateTask = async (req, res) => {
   const { id } = req.params;
   const { title } = req.body;
 
-  await sql`update tasks set title = ${title} where id = ${id}`;
+  await sql`update task1 set title = ${title} where id = ${id}`;
 
   res.json([{ status: "Success" }]);
 };
 
 const deleteTask = async (req, res) => {
   const { id } = req.params;
-  await sql`delete from tasks where id = ${id}`;
+  await sql`delete from task1 where id = ${id}`;
   res.json([{ status: "Success" }]);
 };
 module.exports = {
